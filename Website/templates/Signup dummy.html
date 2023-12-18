@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block title %}SIGN UP{% endblock %} {% block 
+ content %}
+<form>
+  <div class="mb-5"></div>
+  <div class="mb-5">
+    <label for="exampleInputUsername1" class="form-label">Username</label>
+    <input
+      type="Username"
+      class="form-control"
+      id="exampleInputUsername1"
+      aria-describedby="Usernamehelp"
+      />
+    <div id="Usernamehelp" class="form-text">
+    </div>
+    <div class="mb-3">Username harus 3-12 Karakter
+    </div>
+
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+    <div id="emailHelp" class="form-text">
+      <div class="asd">Silahkan Masukan Email</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" />
+    <div class="mb-3">Password harus 6-24 Karakter</div>
+  </div>
+  
+<div class="mb-3-signup">
+  <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
+  <input type="password" class="form-control" id="exampleInputPassword1" />
+  <div class="asd">Silahkan Konfirmasi Password 
+    <a class="logined" href="login"> Sudah mempunyai Akun?</a>
+  </div>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<!-- {% endblock %} -->
+

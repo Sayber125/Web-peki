@@ -1,0 +1,59 @@
+REM Program Perulangan
+DIM uts As INTEGER'Deklarasi variabel uts dengan tipe data Integer'
+DIM uas as INTEGER 'Deklarasi variabel uas dengan tipe data Integer'
+DIM rataRata as DOUBLE'Deklarasi variabel rataRata dengan tipe data Double'
+DIM pilihan as STRING'Deklarasi variabel pilihan dengan tipe data String'
+DO
+
+REM Melakukan Input Pilihan
+PRINT "Ketik Y/N untuk melakukan perhitungan rata-rata program (Y = Yes/N = No)"
+INPUT "Y/N?"; pilihan 'Melakukan input nilai pada variabel pilihan'
+PRINT "Y/N? "; pilihan
+
+IF (pilihan) = "Y" THEN pilihan = "Y" 'Menggunakan perulangan do-while-loop'
+INPUT "Masukan Nilai UTS: "; uts 'Melakukan input nilai pada variabel uts'
+INPUT "Masukan Nilai Uas: "; uas 'Melakukan input nilai pada variabel uas'
+PRINT "Nilai UTS: "; uts
+PRINT "Nilai UAS: "; uas
+rataRata = (uas + uts) / 2 'Melakukan perhitungan rata-rata nilai UTS dan UAS'
+PRINT "Nilai Rata-Rata Ujian: "; rataRata
+PRINT "Apakah Anda ingin melakukan perhitungan rata-rata lagi?"
+
+INPUT "Y/N" ;pilihan 'Melakukan input nilai pada variabel pilihan'
+INPUT "Masukan Nilai UTS: "; uts 'Melakukan input nilai pada variabel uts'
+INPUT "Masukan Nilai Uas: "; uas 'Melakukan input nilai pada variabel uas'
+PRINT "Nilai UTS: "; uts
+PRINT "Nilai UAS: "; uas
+rataRata = (uas + uts) / 2 'Melakukan perhitungan rata-rata nilai UTS dan UAS'
+PRINT "Nilai Rata-Rata Ujian: "; rataRata
+PRINT "Apakah Anda ingin melakukan perhitungan rata-rata lagi?"
+INPUT "Y/N"; pilihan
+
+ELSEIF (pilihan) = "N" THEN
+ EXIT DO
+ END IF
+END 
+
+
+        REM Program Perulangan yang menghitung berapa lama sebuah deposito bank disimpan hingga saldo akhir menjadi dua kali lipa dari saldo awal
+        DIM persenBunga as Double 'Deklarasi konstanta persenBunga sebagai Double dan menginisialisasikannya dengan nilai 0.2'
+        DIM bunga as Double 'Deklarasi variabel bunga sebagai Double'
+        DIM saldoAwal as Double 'Deklarasi variabel saldoAwal sebagai Double'
+        DIM saldoBelanja as Double 'Deklarasi variabel saldoBerjalan sebagai Double'
+        DIM tahun as integer 'Deklarasi variabel tahun sebagai Integer dan menginisialisasikannya dengan nilai 0'
+
+        REM Gunakan statement input untuk menyimpan ke variabel saldoAwal yang di-input oleh pengguna 
+        Input "masukan saldo awal: "; saldoAwal
+        PRINT "Saldo awal Anda: "; saldoAwal 'Mencetak dan memanggil variabel saldoAwal'
+
+        saldoAwal = saldoBerjalan'Menugaskan nilai saldoAwal ke variabel saldoBerjalan'
+
+        REM Melakukan perulangan hingga nilai pada variabel saldoBerjalan menjadi dua kali lipat dari nilai variabel saldoAwal
+        DO while saldoBerjalan < (2 * saldoAwal)
+        tahun = tahun + 1 'Menambahkan tahun dengan 1 ditambah tahun'
+        bunga = persenBunga * saldoBerjalan 'Menghitung bunga dengan mengalikan persenBunga dengan saldoBerjalan'
+        saldoBerjalan = saldoBerjalan + bunga 'Menghitung saldoBerjalan dengan menambahkan saldoBerjalan dengan bunga'
+        WEND
+        PRINT "Saldo Anda akan menjadi dua kali lipat dalam: "; tahun " tahun." 'Mencetak dan memanggil variabel tahun'
+        PRINT "Saldo akhir Anda adalah: "; saldoBerjalan 'Mencetak dan memanggil variabel saldoBerjalan'
+        END

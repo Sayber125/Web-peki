@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- FONTS! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Login</title>
+  </head>
+
+  <body>
+   <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Market <span>Ku</span></a>
+
+      <div class="navbar-nav">
+        <a href="/"> Home </a> 
+        <a href="login">Login</a>
+        <a href="checkout">Pembayaran</a>
+        <!-- <a href="#">Logout</a> -->
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Search sections Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search sections END -->
+
+      <!-- Shopping Cart start -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/products/1.jpg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/products/1.jpg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/products/1.jpg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+      <!----------------------------- Form box ----------------------------------->
+      <div class="form-box">
+        <!------------------- login form -------------------------->
+
+        <div class="login-container" id="login">
+          <div class="top">
+            <span
+              >Don't have an account?
+              <a href="#" onclick="register()">Sign Up</a></span
+            >
+            <header>Login</header>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Username or Email"
+            />
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" class="input-field" placeholder="Password" />
+            <i class="bx bx-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input type="submit" class="submit" value="Sign In" />
+          </div>
+          <div class="two-col">
+            <div class="one">
+              <input type="checkbox" id="login-check" />
+              <label for="login-check"> Remember Me</label>
+            </div>
+            <div class="two">
+              <label><a href="#">Forgot password?</a></label>
+            </div>
+          </div>
+        </div>
+
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+          <div class="top">
+            <span
+              >Have an account? <a href="#" onclick="login()">Login</a></span
+            >
+            <header>Sign Up</header>
+          </div>
+          <div class="two-forms">
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="Firstname" />
+              <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="Lastname" />
+              <i class="bx bx-user"></i>
+            </div>
+          </div>
+          <div class="input-box">
+            <input type="text" class="input-field" placeholder="Email" />
+            <i class="bx bx-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" class="input-field" placeholder="Password" />
+            <i class="bx bx-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input type="submit" class="submit" value="Register" />
+          </div>
+          <div class="two-col">
+            <div class="one">
+              <input type="checkbox" id="register-check" />
+              <label for="register-check"> Remember Me</label>
+            </div>
+            <div class="two">
+              <label><a href="/">Terms & conditions</a></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function myMenuFunction() {
+        var i = document.getElementById("navMenu");
+
+        if (i.className === "nav-menu") {
+          i.className += " responsive";
+        } else {
+          i.className = "nav-menu";
+        }
+      }
+    </script>
+
+    <script>
+      var a = document.getElementById("loginBtn");
+      var b = document.getElementById("registerBtn");
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+
+      function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+      }
+
+      function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+      }
+    </script>
+
+    <script src="../static/js/script.js"></script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

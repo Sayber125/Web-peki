@@ -1,0 +1,11 @@
+:root {
+  --primary: red;
+  --bg: gray;
+}
+
+.teks p {
+  color: blue;
+  text-shadow: 2 rem gray;
+  font-size: 2rem;
+  /* background-color: ); */
+}
